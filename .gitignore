@@ -4,7 +4,7 @@ vendor/
 test/
 
 #exclude my passwords
-config
+config.php
 
 ## IDE support
 .vscode/
