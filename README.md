@@ -13,10 +13,10 @@ APP Build to monitor employee health assessments.
 
 #Screen Shots
 <img src="https://github.com/HermanRas/DocHealth/blob/master/pic/1.png" alt="#Screen Shots">
-<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/1.png" alt="#Screen Shots">
-<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/1.png" alt="#Screen Shots">
-<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/1.png" alt="#Screen Shots">
-<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/1.png" alt="#Screen Shots">
-<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/1.png" alt="#Screen Shots">
-<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/1.png" alt="#Screen Shots">
-<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/1.png" alt="#Screen Shots">
+<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/2.png" alt="#Screen Shots">
+<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/3.png" alt="#Screen Shots">
+<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/4.png" alt="#Screen Shots">
+<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/5.png" alt="#Screen Shots">
+<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/6.png" alt="#Screen Shots">
+<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/7.png" alt="#Screen Shots">
+<img src="https://github.com/HermanRas/DocHealth/blob/master/pic/8.png" alt="#Screen Shots">
