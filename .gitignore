@@ -3,6 +3,9 @@ vendor/
 #exclude Test folder
 test/
 
+#exclude my passwords
+config
+
 ## IDE support
 .vscode/
 composerPKGInstallCommands.md
