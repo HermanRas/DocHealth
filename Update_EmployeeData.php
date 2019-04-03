@@ -70,8 +70,8 @@ if ($_SESSION["AuthLevel"]  >  4){
     <body>
     <div class="container">  
     <form id="contact" action="Update_add.php" method="post">
-        <h3>Employee Added!</h3>
-        <h4>The Employee Has been added to the system</h4>
+        <h3>Employee Checkup!</h3>
+        <h4>The Employee is ready for a checkup.</h4>
         <fieldset>
             Conditions being monitored:
             <?php
