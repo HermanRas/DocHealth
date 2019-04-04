@@ -71,12 +71,12 @@ include_once './inc/AuthSession.php';
         </fieldset>
         <fieldset>
             Conditions: <br>
-            <input type="checkbox" value="" name="Diabetics"> Diabetics
-            <input type="checkbox" value="" name="H"> HIV
-            <input type="checkbox" value="" name="Haarts"> Haarts<br>
-            <input type="checkbox" value="" name="Hypertension"> Hypertension
-            <input type="checkbox" value="" name="Sputum"> Sputum
-            <input type="checkbox" value="" name="Weight"> Weight
+            <input type="checkbox" value="" name="Diabetics"><span class="checkBoxLabel">-Diabetics </span> 
+            <input type="checkbox" value="" name="H"><span class="checkBoxLabel">-HIV </span>
+            <input type="checkbox" value="" name="Haarts"><span class="checkBoxLabel">-Haarts </span><br>
+            <input type="checkbox" value="" name="Hypertension"><span class="checkBoxLabel">-Hypertension </span>
+            <input type="checkbox" value="" name="Sputum"><span class="checkBoxLabel">-Sputum </span>
+            <input type="checkbox" value="" name="Weight"><span class="checkBoxLabel">-Weight </span>
         </fieldset>
         <fieldset>
             Conditions Other: <input type="text" value="" name="other" minlength="2" >
