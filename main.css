@@ -197,3 +197,17 @@ fieldset {
 a{
     color: #4CAF50;
 }
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+}
+
+.checkBoxLabel{
+  padding: 10px;
+  padding-right: 20px !important;
+}
