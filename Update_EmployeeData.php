@@ -53,7 +53,7 @@ if ($_SESSION["AuthLevel"]  >  4){
             $MonitoringResult_Other = odbc_result($Health_list, "MonitoringResult_Other"); 
             $Comments = odbc_result($Health_list, "Comments"); 
 
-            $sql = "select * from [OCHMedical].[dbo].[tWPatientMedicalConditions] WHERE CompanyNumber = '$CompanyNumber';";
+            $sql = "select * from [OCHMedical].[dbo].[tWPatientMedicalConditions] WHERE CompanyNumber = '$empCompanyNumber';";
             $Conditions = odbc_exec($conn, $sql);
         }
     ?>
