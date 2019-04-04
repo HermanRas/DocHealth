@@ -24,6 +24,7 @@ if ($_SESSION["AuthLevel"]  >  4){
     $MonitoringResult_Other_Description = '';
     $MonitoringResult_Other = '';
     $Comments = '';
+    $CapturedBy = '';
 
     //updating from SQL
     if (isset($_POST["CompNr"]) && !empty($_POST["CompNr"])) {
@@ -43,12 +44,12 @@ if ($_SESSION["AuthLevel"]  >  4){
         $MonitoringResult_Other_Description = $_POST["MonitoringResult_Other_Description"];
         $MonitoringResult_Other = $_POST["MonitoringResult_Other"];
         $Comments = $_POST["Comments"];
-        
+        $CapturedBy = $_SESSION["User"];
         include_once './inc/db_open.php';
 
         //Build Vars For HealthData
-        $Colmns =  "(CompanyNumber,MonitoringDateTime,MonitoringResult_BPSystolic,MonitoringResult_BPDiastolic,MonitoringResult_Weight,MonitoringResult_Height,MonitoringResult_BMI,MonitoringResult_Gluco,MonitoringResult_HIV,MonitoringResult_TBScreening,MonitoringResult_Other_Description,MonitoringResult_Other,Comments)";
-        $Values =  "('$empCompanyNumber','$MonitoringDateTime','$MonitoringResult_BPSystolic','$MonitoringResult_BPDiastolic','$MonitoringResult_Weight','$MonitoringResult_Height','$MonitoringResult_BMI','$MonitoringResult_Gluco','$MonitoringResult_HIV','$MonitoringResult_TBScreening','$MonitoringResult_Other_Description','$MonitoringResult_Other','$Comments')";
+        $Colmns =  "(CompanyNumber,MonitoringDateTime,MonitoringResult_BPSystolic,MonitoringResult_BPDiastolic,MonitoringResult_Weight,MonitoringResult_Height,MonitoringResult_BMI,MonitoringResult_Gluco,MonitoringResult_HIV,MonitoringResult_TBScreening,MonitoringResult_Other_Description,MonitoringResult_Other,Comments,CapturedBy)";
+        $Values =  "('$empCompanyNumber','$MonitoringDateTime','$MonitoringResult_BPSystolic','$MonitoringResult_BPDiastolic','$MonitoringResult_Weight','$MonitoringResult_Height','$MonitoringResult_BMI','$MonitoringResult_Gluco','$MonitoringResult_HIV','$MonitoringResult_TBScreening','$MonitoringResult_Other_Description','$MonitoringResult_Other','$Comments','$CapturedBy')";
         //Insert to SQL
         $sql_HealthData = "INSERT INTO [OCHMedical].[dbo].[tWMonitoringResults] $Colmns VALUES $Values;";
         odbc_exec($conn, $sql_HealthData);

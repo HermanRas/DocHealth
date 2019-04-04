@@ -12,6 +12,7 @@ if (isset($_POST["User"]) && !empty($_POST["User"])) {
             $ACCLEVEL = odbc_result($Employee_list, "SecurityLevel");
         if (is_numeric($ACCLEVEL)){
             $_SESSION["Login"] = true;
+            $_SESSION["User"] = $User; 
             $_SESSION["AuthLevel"] = $ACCLEVEL;
             header("Location: menu.php");
         }else{
@@ -27,7 +28,7 @@ if (isset($_POST["User"]) && !empty($_POST["User"])) {
     <body>
     <div class="container">  
       <?php include_once './inc_header.php'; ?>
-      <form id="contact" action="#" method="post">
+      <form id="contact" method="post">
           <h3><b>Doc-Health, </b><br>  Health and Wellness</h3>
         <h4>Please Login</h4>
         <fieldset>
