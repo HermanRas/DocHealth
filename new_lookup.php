@@ -38,7 +38,15 @@ include_once './inc/AuthSession.php';
             $EmployeeDisplay = odbc_result($Employee_list, "EmployeeDisplay");
             $JobTitle = odbc_result($Employee_list, "JobTitle");
             $ContactDetails = odbc_result($Employee_list, "ContactDetails");
+
+            if (odbc_num_rows($Employee_list) === 0){
+                echo "<script>
+                alert('Employee Number not found on Payroll or already registered.') 
+                window.location.replace('menu.php');
+                </script>";
+            }
         }
+
     ?>
     </head>
     <body>
@@ -72,10 +80,9 @@ include_once './inc/AuthSession.php';
         <fieldset>
             Conditions: <br>
             <input type="checkbox" value="" name="Diabetics"><span class="checkBoxLabel">-Diabetics </span> 
-            <input type="checkbox" value="" name="H"><span class="checkBoxLabel">-HIV </span>
-            <input type="checkbox" value="" name="Haarts"><span class="checkBoxLabel">-Haarts </span><br>
             <input type="checkbox" value="" name="Hypertension"><span class="checkBoxLabel">-Hypertension </span>
-            <input type="checkbox" value="" name="Sputum"><span class="checkBoxLabel">-Sputum </span>
+            <input type="checkbox" value="" name="Epilepsy"><span class="checkBoxLabel">-Epilepsy </span><br>
+            <input type="checkbox" value="" name="Asthma"><span class="checkBoxLabel">-Asthma </span>
             <input type="checkbox" value="" name="Weight"><span class="checkBoxLabel">-Weight </span>
         </fieldset>
         <fieldset>
