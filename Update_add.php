@@ -5,8 +5,9 @@ if ($_SESSION["AuthLevel"]  >  4){
     }
 ?>
 <html>
-    <head>
-    <link rel="stylesheet" href="main.css">   
+
+<head>
+    <link rel="stylesheet" href="main.css">
     <?php 
     //Setting DataStructure
     $empCompanyNumber = '';
@@ -53,19 +54,25 @@ if ($_SESSION["AuthLevel"]  >  4){
         //Insert to SQL
         $sql_HealthData = "INSERT INTO [OCHMedical].[dbo].[tWMonitoringResults] $Colmns VALUES $Values;";
         odbc_exec($conn, $sql_HealthData);
+        //Set patent Active
+        $sql_SetActive = "update [OCHMedical].[dbo].[tWPatientDetails] set ActiveIndicator = 1 where CompanyNumber = '$empCompanyNumber';";
+        odbc_exec($conn, $sql_SetActive);
         }
     ?>
-    </head>
-    <body>
-    <div class="container">  
-      <form id="contact" action="#" method="post">
-        <h3>Employee Updated!</h3>
-        <h4>The Employee's  Recoreds has been updated on the system</h4>
-        <fieldset>
-            <button type="button" onclick="location.href = 'menu.php';">Close</button>
-        </fieldset>
-        <p class="copyright">Designed by <a href="http://dragoon.co.za" target="_blank" title="Dragoon Information Security">Dragoon Information Security</a></p>
-      </form>
+</head>
+
+<body>
+    <div class="container">
+        <form id="contact" action="#" method="post">
+            <h3>Employee Updated!</h3>
+            <h4>The Employee's Recoreds has been updated on the system</h4>
+            <fieldset>
+                <button type="button" onclick="location.href = 'menu.php';">Close</button>
+            </fieldset>
+            <p class="copyright">Designed by <a href="http://dragoon.co.za" target="_blank"
+                    title="Dragoon Information Security">Dragoon Information Security</a></p>
+        </form>
     </div>
-    </body>
+</body>
+
 </html>

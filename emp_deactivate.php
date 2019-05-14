@@ -1,6 +1,6 @@
 <?php
 include_once './inc/AuthSession.php';
-if ($_SESSION["AuthLevel"]  >  1){ 
+if ($_SESSION["AuthLevel"]  > 0){ 
     header("Location: index.php ");
     }
 ?>
@@ -10,28 +10,30 @@ if ($_SESSION["AuthLevel"]  >  1){
     <link rel="stylesheet" href="main.css">
     <?php 
     //Setting DataStructure
-    $LoginName = '';
+    $CompNr = ''; //Pat & Comp
 
 
     //updating from SQL
-    if (isset($_GET["LoginName"]) && !empty($_GET["LoginName"])) {
-        $LoginName = $_GET["LoginName"];   
-
-
+    if (isset($_POST["CompNr"]) && !empty($_POST["CompNr"])) {
+        $CompNr = $_POST["CompNr"];
+                
         include_once './inc/db_open.php';
-        //Build Vars For UserData
-        //DELETE FROM SQL
-        $sql_HealthData = "DELETE FROM [OCHMedical].[dbo].[tUserDetail] WHERE [Userlogin] = '$LoginName';";
-        odbc_exec($conn, $sql_HealthData);
-        }
+        //Set patent Active
+        $sql_SetActive = "update [OCHMedical].[dbo].[tWPatientDetails] set ActiveIndicator = 0 where CompanyNumber = '$CompNr';";
+        odbc_exec($conn, $sql_SetActive);
+    }
+
+
+
+
     ?>
 </head>
 
 <body>
     <div class="container">
         <form id="contact" action="#" method="post">
-            <h3>User Deleted!</h3>
-            <h4>The User has been deleted from the system</h4>
+            <h3>Employee Deactivated!</h3>
+            <h4>The Employee Has been deactivated on the system</h4>
             <fieldset>
                 <button type="button" onclick="location.href = 'menu.php';">Close</button>
             </fieldset>
